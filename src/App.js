@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'typeface-roboto';
-import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
+//import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
 
 function App() {
   return (
