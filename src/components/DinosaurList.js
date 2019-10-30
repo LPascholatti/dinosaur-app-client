@@ -27,7 +27,6 @@ export default class DinosaurList extends Component {
         {dinosaurs &&
           <ul>{dinosaurs.map(this.renderDinosaurs)}</ul>
         }
-        <h2>Welcome to this Dinosaur Database</h2>
         </Container>
       </div>
     )
