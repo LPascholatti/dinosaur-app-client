@@ -6,6 +6,10 @@
   flex-direction: row;
 }
 
+.dinosaurList {
+  padding: 1rem;
+}
+
 .dinosaurList img {
   width: 26rem;
   height: 20rem;
@@ -16,4 +20,28 @@
 
 .Main {
   text-align: left;
+}
+
+.home {
+  padding: 8rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.dinosaurListFooter {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem;
+}
+
+.dinosaurListFooter button {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.dinosaurDetails {
+  text-align: center;
+  padding: 6rem;
 }

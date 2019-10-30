@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
 
 export default class DinosaurList extends Component {
 
@@ -20,12 +20,34 @@ export default class DinosaurList extends Component {
 
     const { dinosaurs } = this.props
 
+    const filterCretaceous = dinosaurs.filter(dinosaur => dinosaur.geological_era === 'CRETACEOUS')
+    console.log("Filter1", filterCretaceous)
+
     return (
       <div className="dinosaurList">
-        {!dinosaurs && 'Loading...'}
-        {dinosaurs &&
-          <ul>{dinosaurs.map(this.renderDinosaurs)}</ul>
-        }
+        <main>
+          {!dinosaurs && 'Loading...'}
+          {dinosaurs &&
+            <ul>{dinosaurs.map(this.renderDinosaurs)}</ul>
+          }
+          <Link to="/">Return</Link>
+        </main>
+        <footer className="dinosaurListFooter">
+          <p>Choose a geological era:</p>
+          <br />
+          <br />
+          <Button variant="contained" color="primary">
+            Triassic
+          </Button>
+          <br />
+          <Button variant="contained" color="primary">
+            Jurassic
+          </Button>
+          <br />
+          <Button variant="contained" color="primary">
+            Cretaceous
+          </Button>
+        </footer>
       </div>
     )
   }
