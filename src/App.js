@@ -12,9 +12,6 @@ function App() {
       <header>
         <NavBar />
         <br/>
-        <br/>
-        <br/>
-        <br/>
         <h2>Welcome to this Dinosaur Database</h2>
         <Link to='/dinosaur'>Click Here To Acces Our Database</Link>
       </header>

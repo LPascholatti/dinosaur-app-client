@@ -22,12 +22,10 @@ export default class DinosaurList extends Component {
 
     return (
       <div className="dinosaurList">
-        <Container maxWidth="sm">
         {!dinosaurs && 'Loading...'}
         {dinosaurs &&
           <ul>{dinosaurs.map(this.renderDinosaurs)}</ul>
         }
-        </Container>
       </div>
     )
   }
