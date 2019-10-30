@@ -25,10 +25,13 @@ export default class DinosaurList extends Component {
 
     return (
       <div className="dinosaurList">
-        {!dinosaurs && 'Loading...'}
-        {dinosaurs &&
-          <ul>{dinosaurs.map(this.renderDinosaurs)}</ul>
-        }
+        <main>
+          {!dinosaurs && 'Loading...'}
+          {dinosaurs &&
+            <ul>{dinosaurs.map(this.renderDinosaurs)}</ul>
+          }
+          <Link to="/">Return</Link>
+        </main>
         <footer className="dinosaurListFooter">
           <p>Choose a geological era:</p>
           <br />
