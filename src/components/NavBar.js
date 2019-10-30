@@ -9,7 +9,7 @@ const NavBar = () => {
       <AppBar position='fixed'>
         <Toolbar>
           <Typography variant='h3' color='inherit'>
-            Dino App
+            Dino App - List of Dinosaurs by Geological Era
           </Typography>
         </Toolbar>
       </AppBar>

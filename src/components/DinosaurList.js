@@ -23,11 +23,11 @@ export default class DinosaurList extends Component {
     return (
       <div className="dinosaurList">
         <Container maxWidth="sm">
-        <h2>List of Dinosaurs by Geological Era</h2>
         {!dinosaurs && 'Loading...'}
         {dinosaurs &&
           <ul>{dinosaurs.map(this.renderDinosaurs)}</ul>
         }
+        <h2>Welcome to this Dinosaur Database</h2>
         </Container>
       </div>
     )

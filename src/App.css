@@ -1,7 +1,7 @@
 .dinosaurList ul {
   list-style-type: none;
-  padding: 1.5rem;
-  margin: 1rem;
+  padding: 5rem;
+  margin: 2rem;
   display: flex;
   flex-direction: row;
 }
@@ -9,9 +9,11 @@
 .dinosaurList img {
   width: 26rem;
   height: 20rem;
+  padding: 1rem;
+  border: solid;
+  margin: 1rem;
 }
 
-.navBar {
-  display: flex;
-  flex-direction: row;
+.Main {
+  text-align: left;
 }
