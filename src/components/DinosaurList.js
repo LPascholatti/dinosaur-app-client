@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class DinosaurList extends Component {
 
@@ -6,8 +7,10 @@ export default class DinosaurList extends Component {
     const { id, name, image, geological_era } = dinosaur
     return (
       <li key={id}>
-        <p>{`${name} from geological era: ${geological_era}`}</p>
-        <img className="DinosaurListImages" alt={name} src={image}/>
+        <Link to={`dinosaur/${id}`}>
+          <p>{`${name} from geological era: ${geological_era}`}</p>
+        </Link>
+        <img className="DinosaurListImages" alt={name} src={image} />
       </li>
     )
   }
