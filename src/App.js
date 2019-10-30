@@ -13,9 +13,6 @@ function App() {
       <main>
         <DinosaurListContainer/>
       </main>
-      <footer>
-      <NavBar />
-      </footer>
     </div>
   );
 }

@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography'
 const NavBar = () => {
   return (
     <div className='navBar'>
-      <AppBar position='static'>
+      <AppBar position='fixed'>
         <Toolbar>
           <Typography variant='h3' color='inherit'>
             Dino App

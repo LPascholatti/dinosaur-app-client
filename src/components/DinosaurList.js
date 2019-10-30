@@ -8,12 +8,10 @@ export default class DinosaurList extends Component {
     const { id, name, image, geological_era } = dinosaur
     return (
       <li key={id}>
-         <hr/>
-        <Link to={`dinosaur/${id}`}>
-          <h3>{`${name} from geological era: ${geological_era}`}</h3>
-        </Link>
         <img className="DinosaurListImages" alt={name} src={image} />
-        <br/>
+        <Link to={`dinosaur/${id}`}>
+          <h3>{`${name}, from geological era: ${geological_era}.`}</h3>
+        </Link>
       </li>
     )
   }
