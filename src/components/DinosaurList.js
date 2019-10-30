@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Container from '@material-ui/core/Container';
 
 export default class DinosaurList extends Component {
 
@@ -7,10 +8,12 @@ export default class DinosaurList extends Component {
     const { id, name, image, geological_era } = dinosaur
     return (
       <li key={id}>
+         <hr/>
         <Link to={`dinosaur/${id}`}>
-          <p>{`${name} from geological era: ${geological_era}`}</p>
+          <h3>{`${name} from geological era: ${geological_era}`}</h3>
         </Link>
         <img className="DinosaurListImages" alt={name} src={image} />
+        <br/>
       </li>
     )
   }
@@ -21,11 +24,13 @@ export default class DinosaurList extends Component {
 
     return (
       <div className="dinosaurList">
+        <Container maxWidth="sm">
         <h2>List of Dinosaurs by Geological Era</h2>
         {!dinosaurs && 'Loading...'}
         {dinosaurs &&
           <ul>{dinosaurs.map(this.renderDinosaurs)}</ul>
         }
+        </Container>
       </div>
     )
   }

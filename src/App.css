@@ -8,9 +8,11 @@
 
 .dinosaurList li {
   list-style-type: none;
+  padding: 1.5rem;
+  margin: 1rem;
 }
 
 .dinosaurList img {
   width: 22rem;
-  height: 18rem;
+  height: 20rem;
 }
