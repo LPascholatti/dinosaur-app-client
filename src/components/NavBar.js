@@ -5,11 +5,11 @@ import Typography from '@material-ui/core/Typography'
 
 const NavBar = () => {
   return (
-    <div>
-      <AppBar position='static'>
+    <div className='navBar'>
+      <AppBar position='fixed'>
         <Toolbar>
           <Typography variant='h3' color='inherit'>
-            Dino App
+            Dino App - List of Dinosaurs by Geological Era
           </Typography>
         </Toolbar>
       </AppBar>

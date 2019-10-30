@@ -1,16 +1,19 @@
-#Title {
-  text-align: center;
-}
-
-.dinosaurList {
-  text-align: center;
-}
-
-.dinosaurList li {
+.dinosaurList ul {
   list-style-type: none;
+  padding: 5rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
 }
 
 .dinosaurList img {
-  width: 22rem;
-  height: 18rem;
+  width: 26rem;
+  height: 20rem;
+  padding: 1rem;
+  border: solid;
+  margin: 1rem;
+}
+
+.Main {
+  text-align: left;
 }
