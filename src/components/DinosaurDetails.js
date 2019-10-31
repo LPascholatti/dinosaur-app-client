@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import Button from '@material-ui/core/Button';
 
 export default function DinosaurDetails(props) {
 
@@ -17,7 +18,7 @@ export default function DinosaurDetails(props) {
       This dinosaur populated the planet in the ${geological_era} era.`}</i>
       <br/>
       <br/>
-      <Link to="/dinosaur">Return</Link>
+      <Link to="/dinosaur"><Button variant="contained" color="primary"> Return </Button></Link>
     </div>
   )
 }

@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function CreateDinoForm(props) {
-
   const { onSubmit, onChange, values } = props;
 
   return (
@@ -10,6 +9,12 @@ export default function CreateDinoForm(props) {
       <form onSubmit={onSubmit}>
         <h3>Add Dinos to the Database</h3>
 
+        <img
+          src="https://media.giphy.com/media/cjaLRtuG1RKSc/giphy.gif"
+          alt="gifCreate"
+        />
+        <br/>
+        <br/>
         <label>
           Name:
           <input
@@ -20,7 +25,7 @@ export default function CreateDinoForm(props) {
             placeholder="name"
           />
         </label>
-        <br/>
+        <br />
         <label>
           Description:
           <input
@@ -31,7 +36,7 @@ export default function CreateDinoForm(props) {
             placeholder="description"
           />
         </label>
-        <br/>
+        <br />
         <label>
           Image(url):
           <input
@@ -42,29 +47,29 @@ export default function CreateDinoForm(props) {
             placeholder="image url"
           />
         </label>
-        <br/>
+        <br />
         <label>
           Weight:
           <input
-          type="number"
-          name="weight"
-          onChange={onChange}
-          value={values.weight}
-          placeholder="Weight"
+            type="number"
+            name="weight"
+            onChange={onChange}
+            value={values.weight}
+            placeholder="Weight"
           />
         </label>
-        <br/>
+        <br />
         <label>
           Height:
           <input
-          type="number"
-          name="height"
-          onChange={onChange}
-          value={values.weight}
-          placeholder="Height"
+            type="number"
+            name="height"
+            onChange={onChange}
+            value={values.weight}
+            placeholder="Height"
           />
         </label>
-        <br/>
+        <br />
         <label>
           Region:
           <input
@@ -75,7 +80,7 @@ export default function CreateDinoForm(props) {
             placeholder="region"
           />
         </label>
-        <br/>
+        <br />
         <label>
           Geological Era:
           <select>
@@ -88,5 +93,5 @@ export default function CreateDinoForm(props) {
       </form>
       <Link to="/">Return</Link>
     </div>
-  )
+  );
 }

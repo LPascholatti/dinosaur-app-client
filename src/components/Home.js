@@ -1,19 +1,31 @@
 import React, { Component } from "react";
 import { Link, Route } from "react-router-dom";
 import CreateDinoContainer from "./CreateDinoContainer";
+import Button from "@material-ui/core/Button";
 
 export default class Home extends Component {
   render() {
     return (
       <div>
         <main className="home">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Pangea_animation_03.gif" alt="pangea"/>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Pangea_animation_03.gif"
+            alt="pangea"
+          />
           <h1>Welcome to this Dinosaur Database</h1>
-          <Link to="/dinosaur">Click Here To Acces Our Database</Link>
+          <Link to="/dinosaur">
+            <Button variant="contained" color="primary">
+              Click Here To Acces Our Database
+            </Button>
+          </Link>
           <Route path="/createdino" component={CreateDinoContainer} />
           <br />
           <br />
-          <Link to="/createdino">Add a New Dinosaur to the Database</Link>
+          <Link to="/createdino">
+            <Button variant="contained" color="primary">
+              Add a New Dinosaur to the Database
+            </Button>
+          </Link>
           <br />
           <br />
           <h2>Geological Eras</h2>
