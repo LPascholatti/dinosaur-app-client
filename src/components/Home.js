@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route } from "react-router-dom";
-import Game from './Game'
+import { Link } from "react-router-dom";
 
 export default class Home extends Component {
   render() {
@@ -9,9 +8,6 @@ export default class Home extends Component {
         <main className="home">
         <h1>Welcome to this Dinosaur Database</h1>
         <Link to='/dinosaur'>Click Here To Acces Our Database</Link>
-        <Route path='/game' exact component={Game}/>
-        <br/>
-        <Link to='/game'>Game</Link>
         </main>
       </div>
     )
