@@ -45,3 +45,21 @@
   text-align: center;
   padding: 6rem;
 }
+
+.createDinoForm {
+  padding: 12rem;
+}
+
+.createDinoForm form {
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.erasList ul {
+  list-style-type: none;
+}
+
+.erasList img {
+  max-width: 800px;
+  max-height: 600px;
+}

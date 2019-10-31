@@ -16,6 +16,43 @@ export default class DinosaurList extends Component {
     )
   }
 
+  // filterMax = (dinosaur, era) => {
+
+  //   const { dinosaurs } = this.props
+
+  //   const filterCretaceous = dinosaurs.filter(dinosaur => dinosaur.geological_era === 'CRETACEOUS')
+  //   console.log("Filter1", filterCretaceous)
+  //   const filterJurassic = dinosaurs.filter(dinosaur => dinosaur.geological_era === 'JURASSIC')
+  //   console.log("Filter2", filterJurassic)
+  //   const filterTriassic = dinosaurs.filter(dinosaur => dinosaur.geological_era === 'TRIASSIC')
+  //   console.log('Filter3', filterTriassic)
+
+  //   const mapDinos = dinosaurs.map(this.renderDinosaurs)
+
+  //   const renderDinosaurs = (dinosaur) => {
+  //     const { id, name, image, geological_era } = dinosaur
+  //     return (
+  //       <li key={id}>
+  //         <img className="DinosaurListImages" alt={name} src={image} />
+  //         <Link to={`dinosaur/${id}`}>
+  //           <h3>{`${name}, from geological era: ${geological_era}.`}</h3>
+  //         </Link>
+  //       </li>
+  //     )
+  //   }
+
+  //   switch (era) {
+  //     case 'CRETACEOUS':
+  //       return filterCretaceous.map(renderDinosaurs);
+  //     case 'JURASSIC':
+  //       return filterJurassic.map(renderDinosaurs);
+  //     case 'TRIASSIC':
+  //       return filterTriassic.map(renderDinosaurs);
+  //     default:
+  //       return mapDinos;
+  //   } 
+  // }
+
   render() {
 
     const { dinosaurs } = this.props
@@ -28,9 +65,10 @@ export default class DinosaurList extends Component {
     console.log('Filter3', filterTriassic)
 
     const mapDinos = dinosaurs.map(this.renderDinosaurs)
+    console.log("", mapDinos)
 
-    const filterMax = (banana) => {
-      switch (banana) {
+    const filterMax = (dinosaur) => {
+      switch (dinosaur) {
         case 'CRETACEOUS':
           return filterCretaceous.map(this.renderDinosaurs);
         case 'JURASSIC':
@@ -43,7 +81,7 @@ export default class DinosaurList extends Component {
     }
 
     console.log("test", filterMax('CRETACEOUS'))
-    //onClick={() => filterMax('CRETACEOUS')}
+    // onClick={() => filterMax('CRETACEOUS')}
 
     return (
       <div className="dinosaurList">
@@ -58,11 +96,11 @@ export default class DinosaurList extends Component {
           <p>Choose a geological era:</p>
           <br />
           <br />
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" onClick={() => filterMax('TRIASSIC')}>
             Triassic
           </Button>
           <br />
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" onClick={() => filterMax('JURASSIC')}>
             Jurassic
           </Button>
           <br />
