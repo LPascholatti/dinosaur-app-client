@@ -59,9 +59,18 @@
 
 .erasList ul {
   list-style-type: none;
+  font-size: 1.5rem;
 }
 
 .erasList img {
   max-width: 800px;
   max-height: 600px;
+}
+
+.home p{
+  font-size: 1.5rem;
+}
+
+.home i{
+  font-size: 1.5rem;
 }

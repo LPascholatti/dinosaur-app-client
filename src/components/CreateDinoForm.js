@@ -66,7 +66,7 @@ export default function CreateDinoForm(props) {
             type="number"
             name="height"
             onChange={onChange}
-            value={values.weight}
+            value={values.height}
             placeholder="Height"
           />
         </label>

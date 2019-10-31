@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 
 export default class DinosaurList extends Component {
+
+  state = {
+    era: ''
+  }
+
   renderDinosaurs(dinosaur) {
     const { id, name, image, geological_era } = dinosaur;
     return (
@@ -20,23 +25,24 @@ export default class DinosaurList extends Component {
   render() {
     const { dinosaurs } = this.props;
 
-    const filterCretaceous = dinosaurs.filter(
-      dinosaur => dinosaur.geological_era === "CRETACEOUS"
-    );
-    console.log("Filter1", filterCretaceous);
-    const filterJurassic = dinosaurs.filter(
-      dinosaur => dinosaur.geological_era === "JURASSIC"
-    );
-    console.log("Filter2", filterJurassic);
-    const filterTriassic = dinosaurs.filter(
-      dinosaur => dinosaur.geological_era === "TRIASSIC"
-    );
-    console.log("Filter3", filterTriassic);
-
-    const mapDinos = dinosaurs.map(this.renderDinosaurs);
-    console.log("", mapDinos);
-
     const filterMax = dinosaur => {
+      
+      const filterCretaceous = dinosaurs.filter(
+        dinosaur => dinosaur.geological_era === "CRETACEOUS"
+      );
+      console.log("Filter1", filterCretaceous);
+      const filterJurassic = dinosaurs.filter(
+        dinosaur => dinosaur.geological_era === "JURASSIC"
+      );
+      console.log("Filter2", filterJurassic);
+      const filterTriassic = dinosaurs.filter(
+        dinosaur => dinosaur.geological_era === "TRIASSIC"
+      );
+      console.log("Filter3", filterTriassic);
+
+      const mapDinos = dinosaurs.map(this.renderDinosaurs);
+      console.log("", mapDinos);
+
       switch (dinosaur) {
         case "CRETACEOUS":
           return filterCretaceous.map(this.renderDinosaurs);
@@ -49,13 +55,17 @@ export default class DinosaurList extends Component {
       }
     };
 
+    const attributeEra = (name) => {
+      this.setState({era: name}) 
+    }
+
     console.log("test", filterMax("CRETACEOUS"));
 
     return (
       <div className="dinosaurList">
         <main>
           {!dinosaurs && "Loading..."}
-          {dinosaurs && <ul>{filterMax()}</ul>}
+          {dinosaurs && <ul>{filterMax(this.state.era)}</ul>}
         </main>
         <footer className="dinosaurListFooter">
           <p>Choose a geological era:</p>
@@ -64,7 +74,7 @@ export default class DinosaurList extends Component {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => filterMax("TRIASSIC")}
+            onClick={() => attributeEra('TRIASSIC')}
           >
             Triassic
           </Button>
@@ -72,7 +82,7 @@ export default class DinosaurList extends Component {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => filterMax("JURASSIC")}
+            onClick={() => attributeEra('JURASSIC')}
           >
             Jurassic
           </Button>
@@ -80,14 +90,13 @@ export default class DinosaurList extends Component {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => filterMax("CRETACEOUS")}
+            onClick={() => attributeEra('CRETACEOUS')}
           >
             Cretaceous
           </Button>
           <Link to="/">
             <Button variant="contained" color="primary">
-              {" "}
-              Return{" "}
+              Return
             </Button>
           </Link>
         </footer>
