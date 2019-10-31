@@ -85,9 +85,9 @@ export default function CreateDinoForm(props) {
         <label>
           Geological Era:
           <select>
-            <option value="JURASSIC">JURASSIC</option>
-            <option value="TRIASSIC">TRIASSIC</option>
-            <option value="CRETACEOUS">CRETACEOUS</option>
+            <option value={values.geological_era === "JURASSIC"}>JURASSIC</option>
+            <option value={values.geological_era === "TRIASSIC"}>TRIASSIC</option>
+            <option value={values.geological_era === "CRETACEOUS"}>CRETACEOUS</option>
           </select>
         </label>
         <input type="submit" />
