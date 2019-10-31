@@ -22,13 +22,35 @@ export default class DinosaurList extends Component {
 
     const filterCretaceous = dinosaurs.filter(dinosaur => dinosaur.geological_era === 'CRETACEOUS')
     console.log("Filter1", filterCretaceous)
+    const filterJurassic = dinosaurs.filter(dinosaur => dinosaur.geological_era === 'JURASSIC')
+    console.log("Filter2", filterJurassic)
+    const filterTriassic = dinosaurs.filter(dinosaur => dinosaur.geological_era === 'TRIASSIC')
+    console.log('Filter3', filterTriassic)
+
+    const mapDinos = dinosaurs.map(this.renderDinosaurs)
+
+    const filterMax = (banana) => {
+      switch (banana) {
+        case 'CRETACEOUS':
+          return filterCretaceous.map(this.renderDinosaurs);
+        case 'JURASSIC':
+          return filterJurassic.map(this.renderDinosaurs);
+        case 'TRIASSIC':
+          return filterTriassic.map(this.renderDinosaurs);
+        default:
+          return mapDinos;
+      }
+    }
+
+    console.log("test", filterMax('CRETACEOUS'))
+    //onClick={() => filterMax('CRETACEOUS')}
 
     return (
       <div className="dinosaurList">
         <main>
           {!dinosaurs && 'Loading...'}
           {dinosaurs &&
-            <ul>{dinosaurs.map(this.renderDinosaurs)}</ul>
+            <ul>{filterMax()}</ul>
           }
           <Link to="/">Return</Link>
         </main>
@@ -44,7 +66,7 @@ export default class DinosaurList extends Component {
             Jurassic
           </Button>
           <br />
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" onClick={() => filterMax('CRETACEOUS')}>
             Cretaceous
           </Button>
         </footer>
