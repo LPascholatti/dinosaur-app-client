@@ -45,12 +45,12 @@ export default class Home extends Component {
             meteorite impacts played a role in demarcating the differences
             between the eras.
           </p>
-          <h3>Dinossaurs existed in the Mesozoic era</h3>
+          <h2>Dinossaurs existed in the Mesozoic era</h2>
           <img
             src="https://www.radford.edu/jtso/GeologyofVirginia/Photos/Fossils/PeriodsNew.png"
             alt="erasDetails"
           />
-          <h4>The Mesozoic era is divided in three:</h4>
+          <h2>The Mesozoic era is divided in three:</h2>
           <div className="erasList">
             <ul>
               <li>Triassic</li>
