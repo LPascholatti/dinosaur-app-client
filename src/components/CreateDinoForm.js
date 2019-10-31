@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
 export default function CreateDinoForm(props) {
   const { onSubmit, onChange, values } = props;
@@ -13,8 +14,8 @@ export default function CreateDinoForm(props) {
           src="https://media.giphy.com/media/cjaLRtuG1RKSc/giphy.gif"
           alt="gifCreate"
         />
-        <br/>
-        <br/>
+        <br />
+        <br />
         <label>
           Name:
           <input
@@ -91,7 +92,11 @@ export default function CreateDinoForm(props) {
         </label>
         <input type="submit" />
       </form>
-      <Link to="/">Return</Link>
+      <Link to="/">
+        <Button variant="contained" color="primary">
+          Return
+        </Button>
+      </Link>
     </div>
   );
 }
