@@ -45,3 +45,12 @@
   text-align: center;
   padding: 6rem;
 }
+
+.createDinoForm {
+  padding: 12rem;
+}
+
+.createDinoForm form {
+  padding: 2rem;
+  margin: 1rem;
+}
