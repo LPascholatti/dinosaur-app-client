@@ -7,6 +7,7 @@ export default class Home extends Component {
     return (
       <div>
         <main className="home">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Pangea_animation_03.gif" alt="pangea"/>
           <h1>Welcome to this Dinosaur Database</h1>
           <Link to="/dinosaur">Click Here To Acces Our Database</Link>
           <Route path="/createdino" component={CreateDinoContainer} />
