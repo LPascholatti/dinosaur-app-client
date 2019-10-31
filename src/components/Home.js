@@ -54,9 +54,13 @@ export default class Home extends Component {
               Jurassic, and Cretaceous, which are further subdivided into a
               number of epochs and stages.
             </i>
-            <br/>
-            <br/>
-            <img id="mesozoic" src="https://steemitimages.com/p/C3TZR1g81UNaPs7vzNXHueW5ZM76DSHWEY7onmfLxcK2iQCvQKfMqdRoT8MtbGebR67Ziez1TCbBdLKEJBksGuoTPCkP8JQZ7bh5rcqTNKQwpT4DKWSCRmg?format=match&mode=fit" alt='mesozoicArt'/>
+            <br />
+            <br />
+            <img
+              id="mesozoic"
+              src="https://steemitimages.com/p/C3TZR1g81UNaPs7vzNXHueW5ZM76DSHWEY7onmfLxcK2iQCvQKfMqdRoT8MtbGebR67Ziez1TCbBdLKEJBksGuoTPCkP8JQZ7bh5rcqTNKQwpT4DKWSCRmg?format=match&mode=fit"
+              alt="mesozoicArt"
+            />
           </div>
         </main>
       </div>
