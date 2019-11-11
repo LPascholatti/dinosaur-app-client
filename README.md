@@ -22,4 +22,4 @@ This app uses Redux for controlling the states. It uses some elements of materia
 
 ### Components
 
-Apart from an educational home page, this app allows you to filter a list of dinosaurs by their geological age. It also allows you to send post requests to the API, creating new dinosaurs.
+Apart from an educational home page, this app allows you to filter a list of dinosaurs by their geological age. It also allows you to send post requests to the API, creating new dinosaurs. In the dinosaur list it is possible to check each dinosaur's details clicking on them.
