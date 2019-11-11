@@ -6,4 +6,4 @@ This client has been created using ```create react app```. Apart from an educati
 
 This app uses Redux for controlling the states.
 
-Developed during 2.5 days for a Hackaton at Codaisseur in Amsterdam in November, 2019. 
+Developed during 2.5 days for a Hackathon at Codaisseur in Amsterdam in November, 2019. 
