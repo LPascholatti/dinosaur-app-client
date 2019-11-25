@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-export const baseUrl = 'http://127.0.0.1:8000/api/dinosaur/'
+export const baseUrl = 'https://agile-wave-15412.herokuapp.com/api/dinosaur/'
 
 export const DINOSAURS_FETCHED = 'DINOSAURS_FETCHED'
 export const DINOSAUR_FETCHED = 'DINOSAUR_FETCHED'
