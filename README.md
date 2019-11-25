@@ -3,6 +3,7 @@
 ## Client Developed for a Dinosaur API coded using Django and Django Rest Framework. 
 
 API link: https://agile-wave-15412.herokuapp.com/api/dinosaur/
+Deployed in Netlify: https://hardcore-shannon-8b54f1.netlify.com/
 
 - Sample Gif 1
 
