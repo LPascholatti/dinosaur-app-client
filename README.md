@@ -2,6 +2,8 @@
 
 ## Client Developed for a Dinosaur API coded using Django and Django Rest Framework. 
 
+API link: https://agile-wave-15412.herokuapp.com/api/dinosaur/
+
 - Sample Gif 1
 
 ![Gif](/Images/Recording1.gif)
